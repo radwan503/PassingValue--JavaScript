@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="”description”"
+      content=" show modal when user selects the option and Passing Textbox Value to
+  another page via JavaScript | Javascript"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript,Jquery,bootstrap" />
+    <meta name="author" content="Radwan Anik | Radwan Ahmed" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html" class="btn btn-primary">Home page</a>
+      <a href="/me.html" class="btn btn-primary">another page</a>
+    </nav>
+    <p>Message Form Another Page</p>
+    <p class="messageFromAnotherPage"></p>
+
+    <script>
+      const messageFromAnotherPage = document.querySelector(
+        '.messageFromAnotherPage'
+      );
+      var inputTest = localStorage.getItem('objectToPass');
+      // var displayData = inputTest;
+      messageFromAnotherPage.innerText = inputTest;
+
+      localStorage.removeItem('objectToPass'); // Clear the localStorage
+    </script>
+  </body>
+</html>
